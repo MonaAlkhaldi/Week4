@@ -145,3 +145,16 @@ Number of samples:
 | Validation Accuracy | Validation set (during training) | ~99% |
 | Test Accuracy       | Unseen test set     | 98.6% |
 
+---
+# ## Confusion Matrix & Classification Report
+- 234 fractured images were correctly classified  
+- 265 normal images were correctly classified  
+- Only **7 images** out of 506 were misclassified  
+
+The corresponding classification report:
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| Fractured (0) | 0.9895 | 0.9832 | 0.9863 | 238 |
+| Normal (1)    | 0.9887 | 0.9896 | 0.9891 | 268 |
+| **Overall Accuracy** |  |  | **0.9862** | 506 |
+
