@@ -95,4 +95,55 @@ This final assignment addresses **overfitting in CNNs** by transforming an initi
 
 ### Outcome
 Built a well-regularized CNN with improved generalization and cleaner, scalable PyTorch architecture.
+---
+---
+# Bone Fracture Detection using ResNet (Transfer Learning)
+
+This project focuses on detecting bone fractures from X-ray images using deep learning.  
+A pretrained **ResNet** model is fine-tuned to classify X-ray images into:
+
+- `fractured`
+- `normal`
+
+The goal is to build a robust medical-image classifier using transfer learning and partial fine-tuning.
+
+---
+
+## Dataset
+
+The dataset used in this project is:
+
+**Bone Fracture X-Ray Dataset**  
+https://www.kaggle.com/datasets/usman44m/bone-fracture-x-ray-dataset
+
+It contains labeled X-ray images of bones, organized into two classes:
+- Fractured bones
+- Normal (non-fractured) bones
+
+Number of samples:
+
+| Split | Total Images |
+|------|--------------|
+| Train | **(9248)** |
+| Test  | **(508)** |
+| val   | **(831)** |
+
+## Model & Approach
+
+- Backbone: **ResNet (pretrained on ImageNet)**
+- Strategy: **Transfer Learning with Partial Fine-Tuning**
+- Froze all pretrained layers.
+- Unfroze:
+   - The last ResNet block (`layer4`)
+   - The classification head (`fc`)
+- Trained using Adam optimizer with a small learning rate.
+
+  The model was trained in two runs:
+
+| Training Run | Validation Accuracy |
+|--------------|---------------------|
+| First run    | ~98% |
+| Second run   | ~99% |
+
+Final accurcy : 99
 
