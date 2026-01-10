@@ -138,12 +138,10 @@ Number of samples:
    - The classification head (`fc`)
 - Trained using Adam optimizer with a small learning rate.
 
-  The model was trained in two runs:
+  ## Results & Evaluation
 
-| Training Run | Validation Accuracy |
-|--------------|---------------------|
-| First run    | ~98% |
-| Second run   | ~99% |
-
-Final accurcy : 99
+| Metric Type        | Dataset Used        | Accuracy |
+|--------------------|---------------------|----------|
+| Validation Accuracy | Validation set (during training) | ~99% |
+| Test Accuracy       | Unseen test set     | 98.6% |
 
